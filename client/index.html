@@ -1,0 +1,60 @@
+<head>
+  <title>Chat example</title>
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" type="text/css" src="ie.css" />
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="print" src="print.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <h1>The missing chatroom example</h1>
+        {{> main}}
+    </div>
+</body>
+
+<template name="main">
+    {{#if currentRoom}}
+        {{> room}}
+    {{/if}}
+
+    {{#unless currentRoom}}
+        {{> rooms}}
+    {{/unless}}
+</template>
+
+<template name="rooms">
+  <div class="roomList">
+    <h2>Chat rooms</h2>
+    <p><button type="button" id="addRoom">Add new room</button></p>
+    <ul>
+        {{#each availableRooms}}
+            {{> roomItem}}
+        {{/each}}
+    </ul>
+  </div>
+</template>
+
+<template name="roomItem">
+    <li class="roomItem">
+        {{name}} <a href="javascript:void(0);" class="enter">[Enter]</a>
+    </li>
+</template>
+
+<template name="room">
+    <div class="roomScreen">
+    <h2>Room &quot;{{roomName}}&quot;</h2>
+    <ul id="messages">
+        {{#each messages}}
+            <li><span class="author">{{author}}:</span> {{text}}</li>
+        {{/each}}
+    </ul>
+    <form action="javascript:void(0)">
+        <label for="msg">Message: </label>
+        <input id="msg" />
+        <button type="submit">&rArr; Send</button>
+        <button type="button" id="leave">Leave</button>
+    </form>
+    </div>
+</template>

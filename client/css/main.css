@@ -1,0 +1,34 @@
+html, body {
+    height: 100%;
+    position: relative;
+}
+
+body {
+    font-size: 14px;
+    background: #ccc;
+}
+
+#wrapper {
+    position: relative;
+    top: 2.5%;
+    width: 900px;
+    height: 95%;
+    margin: 0px auto;
+    background: #fff;
+    box-shadow: #888 10px 0px 15px;
+    padding: 3px;
+}
+
+.roomScreen ul#messages {
+    position: relative;
+    border: 1px inset #ccc;
+    width: 850px;
+    height: 500px;
+    margin: 0px auto;
+    list-style: none;
+}
+
+.author {
+    font-weight: bold;
+    text-decoration: underline;
+}

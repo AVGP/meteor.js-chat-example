@@ -1,0 +1,7 @@
+meteor.js Chat example
+
+This is a very simple example of a chat application done with meteor.js.
+
+The client-side consists of a few css-files (3 from blueprint-css and one actual application CSS file.) plus the index.html with the necessary template declarations and the client.js for the interactive parts.
+ The server-side is just the bare server startup code in server/server.js
+
