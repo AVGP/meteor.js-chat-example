@@ -26,6 +26,7 @@ body {
     height: 500px;
     margin: 0px auto;
     list-style: none;
+    overflow: scroll;
 }
 
 .author {
