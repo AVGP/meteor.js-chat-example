@@ -4,12 +4,12 @@ html, body {
 }
 
 body {
-    font-size: 14px;
+    font-size: 62.5%;
     background: #ccc;
 }
 
 #wrapper {
-    position: relative;
+    font-size: 1.4em;
     top: 2.5%;
     width: 900px;
     height: 95%;
@@ -19,8 +19,7 @@ body {
     padding: 3px;
 }
 
-.roomScreen ul#messages {
-    position: relative;
+#messages {
     border: 1px inset #ccc;
     width: 850px;
     height: 500px;
@@ -33,3 +32,4 @@ body {
     font-weight: bold;
     text-decoration: underline;
 }
+#messages .mine { color:green; }
