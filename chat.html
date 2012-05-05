@@ -38,7 +38,7 @@
 
 <template name="roomItem">
     <li class="roomItem">
-        {{name}} <a href="javascript:void(0);" class="enter">[Enter]</a>
+        {{name}} <button class="enter">Enter</button> <button class="delete">Delete</button>
     </li>
 </template>
 
@@ -47,7 +47,7 @@
     <h2>Room &quot;{{roomName}}&quot;</h2>
     <ul id="messages">
         {{#each messages}}
-            <li><span class="author">{{author}}:</span> {{text}}</li>
+            <li><span class="author{{authorClass}}">{{author}} [{{timestamp}}]:</span> {{text}}</li>
         {{/each}}
     </ul>
     <form action="javascript:void(0)">
